@@ -5,8 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  
+<body onload="showLibrary()">
+  <form name="new_book" id="new_book" action="#">
+    <input placeholder="author" type="text" name="author" id="author" required>
+    <input placeholder="title" type="text" name="title" id="title" required>
+    <input placeholder="pages" type="number" name="pages" id="pages" required>
+    <input type="checkbox" name="input" id="read" required>
+    <label for="read">read?</label>
+    <input id="submit" type="submit" name="submit" onclick="addBookToLibrary(event);showLibrary()">Add Book </button>
+  </form>
+  <div id="book_display">
+
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
